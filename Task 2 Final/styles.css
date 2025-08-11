@@ -1,0 +1,252 @@
+:root {
+  --primary: #4b7bec;
+  --accent: #fd9644;
+  --bg: #f0f2f5;
+  --text: #2f3542;
+  --hero-gradient: linear-gradient(120deg, #4b7bec, #fd9644);
+  --max-container: 1200px;
+  --section-padding: 4rem;
+  --font-base: 1.1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--font-base);
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  padding: var(--section-padding) 1.5rem;
+  max-width: var(--max-container);
+  margin: auto;
+}
+
+h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.8;
+}
+
+#hero {
+  height: 100vh;
+  background: var(--hero-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  background: white;
+  color: var(--primary);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 999;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+}
+
+#navbar a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+#navbar a:hover {
+  color: var(--primary);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.skill-item svg {
+  width: 120px;
+  height: 120px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  color: white;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary);
+}
+
+.timeline li {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.timeline li span {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+button {
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #555;
+  background: #fff;
+  font-size: 0.95rem;
+  margin-top: 4rem;
+}
+
+
